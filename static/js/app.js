@@ -1,6 +1,6 @@
 
 // Create option list in html
-sampledata = d3.json("../data/samples.json").then(data => {
+sampledata = d3.json("data/samples.json").then(data => {
 
     data.names.forEach((name) => {
       var option = d3.select("#selDataset").append("option");
@@ -24,7 +24,7 @@ function updatePlotly() {
   console.log(id_Selected)
 
   // Extract data from file
-  sdata = d3.json("../data/samples.json").then(data => {
+  sdata = d3.json("data/samples.json").then(data => {
     
     // Select Data to plot bar chart
     selected_data = data.samples.filter(person =>person.id == id_Selected )[0];
