@@ -131,7 +131,6 @@ function updatePlotly() {
         value: selected_metadata.wfreq,
         title: { text: "Belly Button Washing Frequency" },
         type: "indicator",
-        // mode: "gauge+number+delta",
         mode: "gauge+number",
         delta: { reference: 380 },
         gauge: {
@@ -161,7 +160,6 @@ function updatePlotly() {
       }
     ];
     
-    // var layout = { width: 600, height: 450, margin: { t: 0, b: 0 } };
     Plotly.newPlot('gauge', data);
   });
 
